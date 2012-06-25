@@ -1,0 +1,6 @@
+
+/.redcar/tags
+*.project
+/.meteor/packages
+/.meteor/.gitignore
+/.buildpath

@@ -1,0 +1,60 @@
+<head>
+  <title>yowasouapp2</title>
+</head>
+
+<body>
+  {{> login}}
+  {{> createunit}}
+</body>
+
+<template name="login">
+  {{#if show}}
+  <div id="login">
+    <h1>Please login , you join the war.</h1>
+    user id:<input id="userid" type="text" /><BR/>
+    password:<input id="password" type="password" /><BR/>
+    <button id="userlogin" class="userlogin">Login!!</button>
+    {{> newuser}}
+  </div>
+  {{/if}}
+</template>
+
+<template name="createunit">
+  {{#if show}}
+  <div id="createunit">
+  <h1>Input unit info.</h1>
+  unit name:<input id="new_unitname" type="text" /><BR/>
+  unit hit point: 100<BR/>
+  unit right weapon:
+  <select id="createunit_rightweapon">
+    {{#each handweaponsmaster}}
+    <option value="{{weaponid_m}}">{{name}}</option>
+    {{/each}}
+  </select>
+  unit left weapon:
+  <select id="createunit_leftweapon">
+    {{#each handweaponsmaster}}
+    <option value="{{weaponid_m}}">{{name}}</option>
+    {{/each}}
+  </select>
+  </div>
+  {{/if}}
+</template>
+
+<template name="lines">
+  {{#if show}}
+  <div id="lines">
+  
+  </div>
+  {{/if}}
+</template>
+
+<template name="newuser">
+  <div id="newuser">
+  <h1>Do not you known wars? please create new user , you join the war.</h1>
+  user id:<input id="new_userid" type="text" /><BR/>
+  password:<input id="new_password" type="password" /><BR/>
+  <button id="usernew" class="usernew">New!!</button>
+  </div>
+</template>
+
